@@ -1,0 +1,38 @@
+.button {
+  
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+
+.normal {
+    background-color: gray;
+    color: white;
+}
+
+.delete {
+    background-color: red;
+    color:  whitesmoke;
+
+}
+
+.l {
+    width: 200px;
+    height: 40px;
+    padding: 9px 16px;
+    margin: 20px;
+}
+
+.m {
+    width: 100px;
+    height: 35px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.s {
+    width: 40px;
+    height: 40px;
+    padding: 5px 12px;
+}

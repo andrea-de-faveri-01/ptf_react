@@ -1,8 +1,9 @@
 import React from "react";
 import "./Card.css";
 import { deletePost } from "../../shared/api";
+import Button from "../Button/Button";
 
-const Card = ({ id, title, body, userId, handleDeleteCard }) => {
+const Card = ({ id, title, body, userId, handleDeleteCard}) => {
   const handleDeleteClick = async () => {
     await deletePost(id);
     handleDeleteCard(id);
@@ -13,7 +14,7 @@ const Card = ({ id, title, body, userId, handleDeleteCard }) => {
       <h2>{title}</h2>
       <p>{body}</p>
       <p>UserID: {userId}</p>
-      <button onClick={handleDeleteClick}>Delete</button>
+      <Button type="delete" size="s" onClick={handleDeleteClick}>X</Button>
     </div>
   );
 };

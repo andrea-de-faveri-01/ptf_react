@@ -1,17 +1,17 @@
 import React from "react";
 import "./NewPost.css";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { createPost } from "../../shared/api";
 
-function NewPost({ setPosts }) {
+
+function NewPost({ setCards }) {
   const { register, handleSubmit } = useForm();
 
   async function onSubmit(data) {
     const { title, content } = data;
-    const newPost = { title, body: content };
+    const newPost = { title, body: content, userId: 11 };
     await createPost(newPost);
-    setPosts((posts) => [...posts, newPost]);
+    setCards((prevCards) => [...prevCards, newPost ]);
   }
 
   return (
@@ -31,9 +31,7 @@ function NewPost({ setPosts }) {
         <input type="submit" value="Crear post" />
       </form>
 
-      <button>
-        <Link to="/">Home</Link>
-      </button>
+    
     </div>
   );
 }

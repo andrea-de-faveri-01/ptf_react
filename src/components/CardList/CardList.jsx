@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CardList.css";
 import Card from "../Card/Card";
 import { getPosts } from "../../shared/api";
+import NewPost from "../NewPost/NewPost";
 
 function CardList() {
   const [cards, setCards] = useState([]);
@@ -21,6 +22,7 @@ function CardList() {
 
   return (
     <div className="card-list">
+    
       {cards.map((card) => (
         <Card
           key={card.id}
@@ -32,6 +34,7 @@ function CardList() {
           handleDeleteCard={handleDeleteCard}
         />
       ))}
+      <NewPost setCards={setCards} />
     </div>
   );
 }
