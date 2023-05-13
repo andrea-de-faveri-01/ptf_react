@@ -3,15 +3,20 @@ import "./CardList.css";
 import Card from "../Card/Card";
 import { getPosts } from "../../shared/api";
 import NewPost from "../NewPost/NewPost";
+import Loading from "../Loading/Loading";
 
 function CardList() {
+  
   const [cards, setCards] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getPosts();
-
-      setCards(response.data);
+      setTimeout(async () => {
+        const response = await getPosts();
+        setCards(response.data);
+        setIsLoading(false);
+      }, 2000);
     }
     fetchData();
   }, []);
@@ -19,6 +24,10 @@ function CardList() {
   const handleDeleteCard = (cardId) => {
     setCards((prevCards) => prevCards.filter((card) => card.id !== cardId));
   };
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="card-list">

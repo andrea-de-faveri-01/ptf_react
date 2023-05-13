@@ -1,10 +1,11 @@
 import React from "react";
 import "./Home.css";
 import CardList from "../../components/CardList/CardList";
+import Loading from "../../components/Loading/Loading";
 
 function Home({ posts, loading }) {
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <Loading/>;
   }
 
   return (

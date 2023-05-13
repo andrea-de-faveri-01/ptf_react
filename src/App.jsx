@@ -12,7 +12,6 @@ function App() {
   return (
     <>
     <NavBar/>
-    <h1>BEST POST WEB</h1>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home posts={posts} />} />
