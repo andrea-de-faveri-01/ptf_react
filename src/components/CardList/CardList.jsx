@@ -31,7 +31,6 @@ function CardList() {
 
   return (
     <div className="card-list">
-    
       {cards.map((card) => (
         <Card
           key={card.id}

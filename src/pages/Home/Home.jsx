@@ -12,7 +12,7 @@ function Home({ posts, loading }) {
     <div className="home">
       
 
-      <h1>Posts</h1>
+      <h2>Posts:</h2>
       <CardList posts={posts} />
     </div>
   );

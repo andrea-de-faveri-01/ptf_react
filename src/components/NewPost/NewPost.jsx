@@ -2,13 +2,14 @@ import React from "react";
 import "./NewPost.css";
 import { useForm } from "react-hook-form";
 import { createPost } from "../../shared/api";
+import { AddIcon } from "@chakra-ui/icons";
+import MyButton from "../MyButton/MyButton";
 
 let nextId = 101;
 
 function NewPost({ setCards }) {
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
-
 
   async function onSubmit(data) {
     const { title, content } = data;
@@ -19,22 +20,51 @@ function NewPost({ setCards }) {
   }
 
   return (
-    <div>
-      <h1>New Post</h1>
+    <div className="form-container">
+      <h2>New Post</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-group">
         <label>
           Title:
-          <input {...register("title", { required: true, minLength: 1, maxLength: 20  })} />
-        </label>
+          </label>     
+          <input
+            {...register("title", {
+              required: true,
+              minLength: 1,
+              maxLength: 20,
+            })}
+          />
+        </div>
         <br />
+        <div className="form-group">
         <label>
-          content:
-          <textarea {...register("content", { required: true, minLength: 10, maxLength: 500   })}></textarea>
-        </label>
-        {errors.title && <p>The title is required and must have at least 1 character.</p>}
-        {errors.content && <p>The content is required and must have at least 10 characters and a maximum of 500 characters.</p>}
+          Content: 
+          </label>
+          <textarea
+            {...register("content", {
+              required: true,
+              minLength: 10,
+              maxLength: 500,
+            })}
+          ></textarea>
         <br />
-        <input type="submit" value="Crear post" />
+        <MyButton type="submit" style="add" size="l">
+          <AddIcon boxSize={15} />
+        </MyButton>
+        </div>
+        <div className="errors-container">
+        {errors.title && (
+          <p>
+            The title is required and must have a maximum of 20 characters.
+          </p>
+        )}
+        {errors.content && (
+          <p>
+            The content is required and must have at least 10 characters and a
+            maximum of 500 characters.
+          </p>
+        )}
+        </div>
       </form>
     </div>
   );

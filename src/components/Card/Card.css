@@ -1,42 +1,15 @@
-.button {
-    padding: 9px 16px;
-    border-radius: 2px;
-    background-color: var(--primary);
-    margin: 20px;
-    border: none;
-    color: white;
-    font-size: 16px;
+.post-container {
+    background-color: rgba(245, 245, 127, 0.706)
 }
 
-.medium {
-    background-color: transparent;
-    border: 1px solid var(--terciary);
-    color: var(--terciary);
-} 
-
-.low {
-    background-color: transparent;
-    color: var(--terciary);
+.text-container {
+    text-align: center;
 }
 
-.high:disabled {
-    background-color: var(--disabled);
+.btn-post {
+    margin-left:5px;
 }
 
-.medium:disabled {
-    color: var(--disabled);
-    border-color: var(--disabled);
-}
-
-.low:disabled {
-    color: var(--disabled);
-}
-
-.l {
-    padding: 11px 24px;
-    font-size: 18px;
-}
-
-.s {
-    padding: 5px 12px;
+.id {
+    background-color: rgba(88, 88, 242, 0.469);
 }

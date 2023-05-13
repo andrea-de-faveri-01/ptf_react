@@ -1,5 +1,7 @@
 import React from 'react';
-import Button from '../Button/Button';
+import "./Footer.css";
+import Button from '../MyButton/MyButton';
+import { ArrowUpIcon } from '@chakra-ui/icons';
 
 
 const scrollToTop = () => {
@@ -12,7 +14,9 @@ const scrollToTop = () => {
   const Footer = () => {
     return (
       <>
-        <Button type="normal" onClick={scrollToTop}>Go up</Button>
+      <div className="btn-container">
+        <Button style="normal" onClick={scrollToTop}>Go up <ArrowUpIcon boxSize={20}/></Button>
+      </div>
       </>
     );
   };

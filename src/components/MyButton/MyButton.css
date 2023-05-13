@@ -1,4 +1,4 @@
-.button {
+.my-button {
   
     border: 1px solid black;
     border-radius: 2px;
@@ -8,7 +8,12 @@
 
 .normal {
     background-color: gray;
-    color: white;
+    color: whitesmoke;
+}
+
+.add {
+    background-color: green;
+    color: whitesmoke;
 }
 
 .delete {
@@ -21,7 +26,7 @@
     width: 200px;
     height: 40px;
     padding: 9px 16px;
-    margin: 20px;
+    margin: 20px 20px 20px 20px;
 }
 
 .m {
@@ -34,5 +39,6 @@
 .s {
     width: 40px;
     height: 40px;
-    padding: 5px 12px;
+    padding: 3px 5px;
 }
+
