@@ -23,10 +23,8 @@ function NewPost({ setCards }) {
     <div className="form-container">
       <h2>New Post</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-group">
-        <label>
-          Title:
-          </label>     
+        <div className="form-group">
+          <label>Title:</label>
           <input
             {...register("title", {
               required: true,
@@ -37,9 +35,7 @@ function NewPost({ setCards }) {
         </div>
         <br />
         <div className="form-group">
-        <label>
-          Content: 
-          </label>
+          <label>Content:</label>
           <textarea
             {...register("content", {
               required: true,
@@ -47,23 +43,23 @@ function NewPost({ setCards }) {
               maxLength: 500,
             })}
           ></textarea>
-        <br />
-        <MyButton type="submit" style="add" size="l">
-          <AddIcon boxSize={15} />
-        </MyButton>
+          <br />
+          <MyButton type="submit" style="add" size="l">
+            <AddIcon boxSize={15} />
+          </MyButton>
         </div>
         <div className="errors-container">
-        {errors.title && (
-          <p>
-            The title is required and must have a maximum of 20 characters.
-          </p>
-        )}
-        {errors.content && (
-          <p>
-            The content is required and must have at least 10 characters and a
-            maximum of 500 characters.
-          </p>
-        )}
+          {errors.title && (
+            <p>
+              The title is required and must have a maximum of 20 characters.
+            </p>
+          )}
+          {errors.content && (
+            <p>
+              The content is required and must have at least 10 characters and a
+              maximum of 500 characters.
+            </p>
+          )}
         </div>
       </form>
     </div>

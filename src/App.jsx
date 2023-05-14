@@ -5,21 +5,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
-
-
 function App() {
   const [posts, setPosts] = useState([]);
 
   return (
     <>
-    
-    <NavBar/>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home posts={posts} />} />
-      </Routes>
-    </BrowserRouter>
-    <Footer/>
+      <NavBar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home posts={posts} />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </>
   );
 }

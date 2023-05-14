@@ -21,10 +21,9 @@ const NavBar = () => {
           position="right"
           onClick={scrollToBottom}
         >
-          Go to "New Post" <ArrowDownIcon boxSize={20}/>
+          Go to "New Post" <ArrowDownIcon boxSize={20} />
         </MyButton>
       </div>
-    
     </>
   );
 };

@@ -5,13 +5,11 @@ import Loading from "../../components/Loading/Loading";
 
 function Home({ posts, loading }) {
   if (loading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   return (
     <div className="home">
-      
-
       <h2>Posts:</h2>
       <CardList posts={posts} />
     </div>

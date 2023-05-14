@@ -1,9 +1,9 @@
-import React from 'react';
-
+import React from "react";
+import "./Loading.css";
 function Loading() {
   return (
     <div>
-      <img src="/assets/giphy.gif" alt="Loading..." />
+      <img className="gif" src="/assets/giphy.gif" alt="Loading..." />
       ...LOADING...
     </div>
   );

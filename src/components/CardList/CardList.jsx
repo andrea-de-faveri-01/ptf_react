@@ -6,7 +6,6 @@ import NewPost from "../NewPost/NewPost";
 import Loading from "../Loading/Loading";
 
 function CardList() {
-  
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
