@@ -7,7 +7,7 @@ import MyButton from "../MyButton/MyButton";
 
 let nextId = 101;
 
-function NewPost({ setCards }) {
+const NewPost = ({ setCards }) => {
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
 

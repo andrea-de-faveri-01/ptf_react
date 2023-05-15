@@ -3,7 +3,7 @@ import "./Home.css";
 import CardList from "../../components/CardList/CardList";
 import Loading from "../../components/Loading/Loading";
 
-function Home({ posts, loading }) {
+const Home = ({ posts, loading }) => {
   if (loading) {
     return <Loading />;
   }

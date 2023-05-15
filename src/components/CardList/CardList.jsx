@@ -5,7 +5,7 @@ import { getPosts } from "../../shared/api";
 import NewPost from "../NewPost/NewPost";
 import Loading from "../Loading/Loading";
 
-function CardList() {
+const CardList = () => {
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -44,6 +44,6 @@ function CardList() {
       <NewPost setCards={setCards} />
     </div>
   );
-}
+};
 
 export default CardList;
